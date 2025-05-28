@@ -33,7 +33,10 @@
       background: #2a2a2a;
       padding: 1rem;
       border-left: 4px solid #0077cc;
-      margin-top: 1rem;
+      margin: 0;
+    }
+    .highlight p {
+      margin: 0;
     }
     .contact {
       margin-top: 3rem;
@@ -41,20 +44,28 @@
     }
     .cta {
       margin-top: 2rem;
-      padding: 1rem;
+      padding: 0.8rem 1.5rem;
       background: #0077cc;
       color: white;
       text-align: center;
       border-radius: 5px;
       text-decoration: none;
       display: inline-block;
-    }
-    .cta:hover {
-      background: #005fa3;
+      text-align: center;
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 0;
     }
     .tabs {
       display: flex;
       border-bottom: 1px solid #444;
+      margin-bottom: 0;
+    }
+    .tabs-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
       margin-bottom: 2rem;
     }
     .tab {
@@ -74,6 +85,7 @@
     }
     .tab-content {
       display: none;
+      padding: 0;          /* remove side padding so boxes align left with tabs */
     }
     .tab-content.active {
       display: block;
@@ -83,8 +95,27 @@
       border: 1px solid #3a3a3a;
       border-radius: 10px;
       padding: 1.5rem;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      width: 100%;
+    }
+    .linkedin-icon {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      gap: 0.5rem;
+    }
+    .linkedin-icon a {
+      color: #00bfff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .linkedin-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: #00bfff;
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -95,36 +126,28 @@
       document.getElementById(tabId + '-tab').classList.add('active');
       document.getElementById(tabId + '-content').classList.add('active');
     }
-    window.onload = () => showTab('professional');
+    window.onload = () => showTab('pmo_delivery');
   </script>
 </head>
 <body>
   <div class="container">
     <h1>Scott Lovett</h1>
     <img src="headshot.jpg" alt="Scott Lovett" style="width:140px;border-radius:50%;float:right;margin:0 0 1rem 1.5rem;box-shadow:0 0 10px rgba(0,0,0,0.5);" />
-    <p><strong>Strategic Program & Technical Operations Leader</strong></p>
+    <p><strong>Executive Transformation, Delivery, & Product Leader – Cybersecurity, IT, and Business Strategy</strong></p>
 
-    <div class="tabs">
-      <div id="professional-tab" class="tab" onclick="showTab('professional')">Professional</div>
-      <div id="community-tab" class="tab" onclick="showTab('community')">Community</div>
-    </div>
-
-    <div id="professional-content" class="tab-content">
-      <div class="section-box">
-        <div class="highlight">
-          <p>I drive clarity, execution, and cross-functional alignment across technical and business teams—especially in complex, high-stakes environments. With 15+ years of experience leading cybersecurity programs, modernizing infrastructure, and scaling high-growth operations, I bring a unique blend of strategic thinking, delivery precision, and technical fluency.</p>
-        </div>
-
-        <h2><span style="color:#00bfff;">💼</span> Recent Impact</h2>
-        <ul>
-          <li>Built and scaled PMOs for security and infrastructure transformation programs across healthcare, utilities, and public sector.</li>
-          <li>Led Zero Trust adoption and compliance initiatives involving complex vendor ecosystems and regulatory frameworks.</li>
-          <li>Developed an AI-based system to automate federal RFP/RFI responses, streamlining response time by 60%.</li>
-          <li>Designed and launched a remote-first marketplace platform with integrated data ingestion and role-based access control.</li>
-        </ul>
-
-        <h2><span style="color:#00bfff;">🎯</span> What I'm Looking For</h2>
-        <p>I’m seeking a remote leadership role where I can partner closely with technical and executive teams to drive strategic execution—whether that’s through operational delivery, platform scaling, or cross-functional program leadership.</p>
+    <div class="tabs-container">
+      <div class="tabs">
+        <div id="pmo_delivery-tab" class="tab" onclick="showTab('pmo_delivery')">Who am I?</div>
+        <div id="product-tab" class="tab" onclick="showTab('product')">PMO/Product</div>
+        <div id="cyber-tab" class="tab" onclick="showTab('cyber')">Cyber</div>
+        <div id="federal-tab" class="tab" onclick="showTab('federal')">Federal</div>
+        <div id="community-tab" class="tab" onclick="showTab('community')">Community</div>
+      </div>
+      <div class="linkedin-icon">
+        <a href="https://www.linkedin.com/in/smlovett/" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.036-1.849-3.036-1.851 0-2.134 1.445-2.134 2.939v5.666H9.356V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.368-1.849 3.598 0 4.264 2.368 4.264 5.455v6.285zM5.337 7.433c-1.144 0-2.071-.928-2.071-2.071s.927-2.071 2.071-2.071 2.071.927 2.071 2.071-.927 2.071-2.071 2.071zM6.769 20.452H3.904V9h2.865v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.729v20.542C0 23.23.792 24 1.771 24h20.451C23.2 24 24 23.229 24 22.271V1.729C24 .771 23.2 0 22.225 0z"/></svg>
+          <span>View on LinkedIn</span>
+        </a>
       </div>
     </div>
 
@@ -135,12 +158,109 @@
       </div>
     </div>
 
-    <div class="contact">
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <div id="pmo_delivery-content" class="tab-content">
+      <div class="section-box">
+        <h2><span style="color:#00bfff;">💡</span> About Scott...</h2>
+          <p>I am a strategic product and delivery leader with 20+ years of experience driving innovation, market growth, and operational excellence across cybersecurity, cloud, defense, and regulated industries. Proven ability to shape and scale secure, mission-critical product portfolios—balancing customer needs, regulatory demands, and evolving threat landscapes. Adept at bridging technical depth and business strategy, building empowered cross-functional teams, and delivering value in complex, high-stakes environments. Known for transforming delivery organizations, fostering agile product cultures, and guiding businesses through cybersecurity-driven change at scale.</p>
+        </div>
+      <div class="section-box">
+        <h2><span style="color:#00bfff;">🎯</span> What I'm Looking For</h2>
+        <p>I am seeking a long-term opportunity in a culture focused organization where I can apply my vast technical leadership experience to help drive strategic execution—whether that’s through product stratgey, operational delivery, platform tranformation & scaling, or overall business maturity and strategy by integrating those verticals through cross-functional program leadership.</p>
+        </div>
     </div>
+    <div id="product-content" class="tab-content">
+      <div class="section-box">
+        <div class="highlight">
+          <p>Strategic product and delivery leader with 20+ years of experience driving innovation, market growth, and operational excellence across cybersecurity, cloud, defense, and regulated industries. Proven ability to shape and scale secure, mission-critical product portfolios—balancing customer needs, regulatory demands, and evolving threat landscapes. Adept at bridging technical depth and business strategy, building empowered cross-functional teams, and delivering value in complex, high-stakes environments. Known for transforming delivery organizations, fostering agile product cultures, and guiding businesses through cybersecurity-driven change at scale.</p>
+        </div>
 
-    <a class="cta" href="mailto:you@example.com">Let’s Connect</a>
-  </div>
+        <h2><span style="color:#00bfff;">💼</span> Recent Impact</h2>
+        <ul>
+          <li>Restored momentum across a $30M cybersecurity solution portfolio by strengthening product execution, improving time-to-value, and aligning delivery with strategic business outcomes after prior leadership struggled with risk, budget, and schedule control.</li>
+          <li>Established and scaled a global PMO to enable a $700M cybersecurity transformation program across 121 industrial facilities in North America and Europe—bridging a critical execution gap for the organization’s first enterprise-wide OT security initiative.</li>
+          <li>Developed an AI-based system to automate federal RFP/RFI responses, streamlining response time by 60%.</li>
+          <li>Designed and launched a remote-first marketplace platform with integrated data ingestion and role-based access control.</li>
+        </ul>
+      </div>
+    </div>
+    <div id="cyber-content" class="tab-content">
+      <div class="section-box">
+        <h2 style="color:#09a5ee;">IT & OT Security Experience Highlights</h2>
+        <h2><span style="color:#00bfff;">🏥</span> McKesson: International OT Security</h2>
+        <p>Led the global cybersecurity delivery program supporting McKesson’s $700M OT security transformation to drive secure rollout of OT controls at scale.</p>
+        <ul>
+          <li>Enabled secure standardization of OT controls by aligning architecture, product, and field deployment teams to local threat models and maturity levels.</li>
+          <li>Worked directly with Armis and assisted onsite with installation teams to stand-up network monitoring and asset management capabilities for OT environments.</li>
+          <li>Delivered strategic & tactical alignment between IT, Security, and Ops — reducing execution delays, increasing stakeholder trust, and improving audit readiness globally.</li>
+        </ul>
+        <h2><span style="color:#00bfff;">🏨</span> International Hotels Group (IHG): Franchise Property Cyber</h2>
+        <p>Designed enterprise IT security product strategy for Intercontinental Hotels Group (IHG), addressing cyber threats from over 3,500 franchise properties. Designed and delivered a non-invasive, low-cost security architecture using:</p>
+        <ul>
+          <li>Cleanup and standardization of Hotel Block firewall rules with Skybox implementation.</li>
+          <li>Innovative integration of AppDynamics with SIEM.</li>
+          <li>Expanded deployment of endpoint protection to property critical assets.</li>
+          <li>Protected a $40B+ global brand by reducing enterprise risk through innovative approaches without disrupting franchise autonomy or requiring capital investments.</li>
+        </ul>
+<!--
+        <h2><span style="color:#00bfff;">🛠️</span> Tools Utilized Across Projects</h2>
+      <div class="tool-logos" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+  <img src="logos/tool1.png" alt="Tool 1" style="height: 40px;" />
+  <img src="logos/tool2.png" alt="Tool 2" style="height: 40px;" />
+  <img src="logos/tool3.png" alt="Tool 3" style="height: 40px;" />
+  <img src="logos/tool4.png" alt="Tool 4" style="height: 40px;" />
+  <img src="logos/tool5.png" alt="Tool 5" style="height: 40px;" />
+  <img src="logos/tool6.png" alt="Tool 6" style="height: 40px;" />
+  <img src="logos/tool7.png" alt="Tool 7" style="height: 40px;" />
+  <img src="logos/tool8.png" alt="Tool 8" style="height: 40px;" />
+  <img src="logos/tool9.png" alt="Tool 9" style="height: 40px;" />
+  <img src="logos/tool10.png" alt="Tool 10" style="height: 40px;" />
+  <img src="logos/tool12.png" alt="Tool 12" style="height: 40px;" />
+  <img src="logos/tool13.png" alt="Tool 13" style="height: 40px;" />
+</div>
+-->
+      </div>
+    </div>
+    <div id="federal-content" class="tab-content">
+      <div class="section-box">
+  <h2><span style="color:#00bfff;">🏛️</span> Federal Experience Snapshot</h2>
+
+  <!-- CYBERDYNE SYSTEMS -->
+  <h2><span style="color:#00bfff;">💻</span> Cyberdyne Systems (2025-Present)</h2>
+  <p>Part-time Sr. Consultant crafting winning proposals and building a full-stack contractor marketplace for the federal sector.</p>
+  <ul>
+    <li>Authors technical proposals for PMO, cyber, IT strategy, and infrastructure programs.</li>
+    <li>Architects a secure, TypeScript-based marketplace (Next.js 13 + Supabase + Vercel CI/CD).</li>
+    <li>Implements robust UI theming (Tailwind) and DevOps pipelines for rapid feature releases.</li>
+  </ul>
+
+  <!-- STRATEGIC SOLUTIONS INTERNATIONAL -->
+  <h2><span style="color:#00bfff;">🌍</span> Strategic Solutions International (2023-2024)</h2>
+  <p>Delivery Director & Head of Capture for CDC ITOPSS contracts in global public-health tech.</p>
+  <ul>
+    <li>Won ITOPSS 4.0 IDIQ recompete ($75 M) + Mozambique Task Order ($3.7 M).</li>
+    <li>Streamlined BD pipeline and ran color-team reviews to boost win probability.</li>
+    <li>Coordinated in-country & domestic SMEs, securing key personnel for proposal bids.</li>
+  </ul>
+
+  <!-- AMERICAN CYBERSYSTEMS -->
+  <h2><span style="color:#00bfff;">🧪</span> American Cybersystems (2015-2018)</h2>
+  <p>Managing Director of PMO & Delivery for CDC global health programs under a $250 M IDIQ.</p>
+  <ul>
+    <li>Captured ITOPSS 3.0 IDIQ ($250 M) and 7 initial task orders (~ $14 M).</li>
+    <li>Led delivery to epidemiology teams in 9 countries; 20+ direct reports.</li>
+    <li>Installed federally compliant cost-accounting and international payroll systems across 5 continents.</li>
+  </ul>
+
+  <!-- LOCKHEED MARTIN -->
+  <h2><span style="color:#00bfff;">⚓</span> Lockheed Martin – Undersea Systems (1999-2013)</h2>
+  <p>Program Management Manager overseeing $13-$60 M submarine & torpedo control contracts.</p>
+  <ul>
+    <li>Directed end-to-end SDLC, system integration, and international site deployments.</li>
+    <li>Won $13.1 M Netherlands heavyweight-torpedo weapon-control upgrade.</li>
+    <li>Managed sonar, combat-system, and FPGA-based electronics programs for multiple allied navies.</li>
+  </ul>
+</div>
+</div>
+<a class="cta" href="connect.html">Let’s Connect</a>
 </body>
 </html>
