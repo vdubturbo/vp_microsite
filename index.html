@@ -94,10 +94,13 @@
       background: #2b2b2b;
       border: 1px solid #3a3a3a;
       border-radius: 10px;
-      padding: 1.5rem;
-      margin: 2rem 0;
+      padding: 1rem 1.5rem;  /* reduced top/bottom padding */
+      margin: 1rem 0;        /* reduced vertical margin */
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
       width: 100%;
+    }
+    .section-box h2 {
+      margin-top: 0.75rem;
     }
     .linkedin-icon {
       display: flex;
@@ -141,7 +144,7 @@
         <div id="product-tab" class="tab" onclick="showTab('product')">PMO/Product</div>
         <div id="cyber-tab" class="tab" onclick="showTab('cyber')">Cyber</div>
         <div id="federal-tab" class="tab" onclick="showTab('federal')">Federal</div>
-        <div id="community-tab" class="tab" onclick="showTab('community')">Community</div>
+        <div id="community-tab" class="tab" onclick="showTab('community')">Dev/AI/ML</div>
       </div>
       <div class="linkedin-icon">
         <a href="https://www.linkedin.com/in/smlovett/" target="_blank" rel="noopener noreferrer">
@@ -152,9 +155,44 @@
     </div>
 
     <div id="community-content" class="tab-content">
+      
+        <h2><span style="color:#00bfff;">🤖</span> Dev/AI/ML Experience Snapshot</h2>
+      
+
       <div class="section-box">
-        <h2><span style="color:#00bfff;">🌍</span> Philanthropic & Community Engagement</h2>
-        <p>I'm passionate about giving back and supporting communities through mentorship, volunteering, and social impact initiatives. I’ve contributed to cybersecurity education efforts, mentored emerging tech professionals, and participated in digital equity and workforce development programs. I believe leadership extends beyond the boardroom—it’s about lifting others up, sharing knowledge, and driving meaningful change in the world around us.</p>
+        <h3><span style="color:#00bfff;">🔍</span> Data Scraping & Analysis</h3>
+        <p>Automated extraction and processing of web data to fuel analytics and reporting pipelines.</p>
+        <ul>
+          <li>Built Python scraping pipelines with BeautifulSoup and Selenium for reliable data collection.</li>
+          <li>Normalized and stored data in PostgreSQL, enabling versatile analysis with Pandas.</li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h3><span style="color:#00bfff;">🛒</span> Remote Marketplace Platform</h3>
+        <p>Designed and launched a scalable marketplace for on-demand professional services.</p>
+        <ul>
+          <li>Implemented real-time data ingestion, role-based access control, and transaction workflows.</li>
+          <li>Leveraged Next.js, Supabase, and Tailwind CSS for a responsive user experience.</li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h3><span style="color:#00bfff;">🍩</span> Donut Dashboard</h3>
+        <p>Developed an interactive dashboard to visualize key performance metrics using donut charts.</p>
+        <ul>
+          <li>Built reusable React components and D3.js-based visualizations for dynamic data views.</li>
+          <li>Integrated with backend APIs for real-time metric updates and filtering capabilities.</li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h3><span style="color:#00bfff;">🤖</span> News Intelligence with AI/ML</h3>
+        <p>Created an AI-driven system to classify and extract insights from news articles.</p>
+        <ul>
+          <li>Trained NLP models to categorize content and detect sentiment across multiple sources.</li>
+          <li>Deployed inference pipelines with Python and TensorFlow for scalable processing.</li>
+        </ul>
       </div>
     </div>
 
@@ -166,8 +204,13 @@
       <div class="section-box">
         <h2><span style="color:#00bfff;">🎯</span> What I'm Looking For</h2>
         <p>I am seeking a long-term opportunity in a culture focused organization where I can apply my vast technical leadership experience to help drive strategic execution—whether that’s through product stratgey, operational delivery, platform tranformation & scaling, or overall business maturity and strategy by integrating those verticals through cross-functional program leadership.</p>
-        </div>
-    </div>
+      </div>
+      <div class="section-box">
+        <h2><span style="color:#00bfff;">👀</span> Why I'm Looking</h2>
+        <p>My current role is dependent on a specific client. The SOW is ending soon and my employer no longer wants to continue in the cyber/delivery advisory space. They are not only aware that I am looking for my next role, but also suggested I do so.</p>
+      </div>
+          
+      </div>
     <div id="product-content" class="tab-content">
       <div class="section-box">
         <div class="highlight">
@@ -183,9 +226,10 @@
         </ul>
       </div>
     </div>
+
     <div id="cyber-content" class="tab-content">
+        <h2 style="color:#ffffff;">🛡️ IT & OT Security Experience Snapshot</h2>
       <div class="section-box">
-        <h2 style="color:#09a5ee;">IT & OT Security Experience Highlights</h2>
         <h2><span style="color:#00bfff;">🏥</span> McKesson: International OT Security</h2>
         <p>Led the global cybersecurity delivery program supporting McKesson’s $700M OT security transformation to drive secure rollout of OT controls at scale.</p>
         <ul>
@@ -193,6 +237,8 @@
           <li>Worked directly with Armis and assisted onsite with installation teams to stand-up network monitoring and asset management capabilities for OT environments.</li>
           <li>Delivered strategic & tactical alignment between IT, Security, and Ops — reducing execution delays, increasing stakeholder trust, and improving audit readiness globally.</li>
         </ul>
+      </div>
+      <div class="section-box">
         <h2><span style="color:#00bfff;">🏨</span> International Hotels Group (IHG): Franchise Property Cyber</h2>
         <p>Designed enterprise IT security product strategy for Intercontinental Hotels Group (IHG), addressing cyber threats from over 3,500 franchise properties. Designed and delivered a non-invasive, low-cost security architecture using:</p>
         <ul>
@@ -201,6 +247,7 @@
           <li>Expanded deployment of endpoint protection to property critical assets.</li>
           <li>Protected a $40B+ global brand by reducing enterprise risk through innovative approaches without disrupting franchise autonomy or requiring capital investments.</li>
         </ul>
+     
 <!--
         <h2><span style="color:#00bfff;">🛠️</span> Tools Utilized Across Projects</h2>
       <div class="tool-logos" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
@@ -221,44 +268,48 @@
       </div>
     </div>
     <div id="federal-content" class="tab-content">
+     <h2 style="color:#ffffff;">🏛️ Federal Experience Snapshot</h2>
       <div class="section-box">
-  <h2><span style="color:#00bfff;">🏛️</span> Federal Experience Snapshot</h2>
-
+  
   <!-- CYBERDYNE SYSTEMS -->
-  <h2><span style="color:#00bfff;">💻</span> Cyberdyne Systems (2025-Present)</h2>
+  <h3><span style="color:#00bfff;">💻</span> Cyberdyne Systems (2025-Present)</h3>
   <p>Part-time Sr. Consultant crafting winning proposals and building a full-stack contractor marketplace for the federal sector.</p>
   <ul>
     <li>Authors technical proposals for PMO, cyber, IT strategy, and infrastructure programs.</li>
     <li>Architects a secure, TypeScript-based marketplace (Next.js 13 + Supabase + Vercel CI/CD).</li>
     <li>Implements robust UI theming (Tailwind) and DevOps pipelines for rapid feature releases.</li>
   </ul>
-
+</div>
+<div class="section-box">
   <!-- STRATEGIC SOLUTIONS INTERNATIONAL -->
-  <h2><span style="color:#00bfff;">🌍</span> Strategic Solutions International (2023-2024)</h2>
+  <h3><span style="color:#00bfff;">🌍</span> Strategic Solutions International (2023-2024)</h3>
   <p>Delivery Director & Head of Capture for CDC ITOPSS contracts in global public-health tech.</p>
   <ul>
     <li>Won ITOPSS 4.0 IDIQ recompete ($75 M) + Mozambique Task Order ($3.7 M).</li>
     <li>Streamlined BD pipeline and ran color-team reviews to boost win probability.</li>
     <li>Coordinated in-country & domestic SMEs, securing key personnel for proposal bids.</li>
   </ul>
-
+</div>
+<div class="section-box">
   <!-- AMERICAN CYBERSYSTEMS -->
-  <h2><span style="color:#00bfff;">🧪</span> American Cybersystems (2015-2018)</h2>
+  <h3><span style="color:#00bfff;">🧪</span> American Cybersystems (2015-2018)</h3>
   <p>Managing Director of PMO & Delivery for CDC global health programs under a $250 M IDIQ.</p>
   <ul>
     <li>Captured ITOPSS 3.0 IDIQ ($250 M) and 7 initial task orders (~ $14 M).</li>
     <li>Led delivery to epidemiology teams in 9 countries; 20+ direct reports.</li>
     <li>Installed federally compliant cost-accounting and international payroll systems across 5 continents.</li>
   </ul>
-
+</div>
+<div class="section-box">
   <!-- LOCKHEED MARTIN -->
-  <h2><span style="color:#00bfff;">⚓</span> Lockheed Martin – Undersea Systems (1999-2013)</h2>
+  <h3><span style="color:#00bfff;">⚓</span> Lockheed Martin – Undersea Systems (1999-2013)</h3>
   <p>Program Management Manager overseeing $13-$60 M submarine & torpedo control contracts.</p>
   <ul>
     <li>Directed end-to-end SDLC, system integration, and international site deployments.</li>
     <li>Won $13.1 M Netherlands heavyweight-torpedo weapon-control upgrade.</li>
     <li>Managed sonar, combat-system, and FPGA-based electronics programs for multiple allied navies.</li>
   </ul>
+
 </div>
 </div>
 <a class="cta" href="connect.html">Let’s Connect</a>
