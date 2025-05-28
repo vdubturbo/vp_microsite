@@ -121,6 +121,51 @@
       height: 20px;
       fill: #00bfff;
     }
+
+    @media (max-width: 600px) {
+      /* Stack tabs vertically */
+      .tabs {
+        flex-direction: column;
+        border-bottom: none;
+      }
+      .tab {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Responsive headshot */
+      img[alt="Scott Lovett"] {
+        float: none !important;
+        display: block;
+        margin: 0 auto 1rem;
+        width: 100px;
+      }
+
+      /* Adjust container padding */
+      .container {
+        padding: 1rem;
+      }
+
+      /* Tighter section-box spacing */
+      .section-box {
+        padding: 0.75rem 1rem;
+      }
+
+      /* Responsive headings */
+      h1 {
+        font-size: 1.75rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      /* Finger-friendly tap targets */
+      .cta,
+      .linkedin-icon a {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script>
