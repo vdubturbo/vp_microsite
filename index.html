@@ -61,6 +61,11 @@
       display: inline-block;
       margin-left: 0;
       margin-right: 0;
+      transition: background 0.2s, color 0.2s;
+    }
+    .cta:hover {
+      background: #333;
+      color: #fff;
     }
     .tabs {
       display: flex;
@@ -187,7 +192,7 @@
 <body>
   <div class="container">
     <h1>Scott Lovett</h1>
-    <img src="headshot.jpg" alt="Scott Lovett" style="width:140px;border-radius:50%;float:right;margin:0 0 1rem 1.5rem;box-shadow:0 0 10px rgba(0,0,0,0.5);" />
+    <img src="headshot.jpg" alt="Scott Lovett" style="width:140px;border-radius:50%;float:right;margin:1.5rem 0 1rem 1.5rem;box-shadow:0 0 10px rgba(0,0,0,0.5);" />
     <h2 style="color:#ffffff;">Executive PMO, Product, and Delivery Leader</h2> 
     <h3 style="color:#c3c3bf;">Cybersecurity, IT, and Business Strategy</h3>
 
@@ -310,7 +315,12 @@
     </div>
 
     <div id="cyber-content" class="tab-content">
-        <h2 style="color:#ffffff;">🛡️ IT & OT Security Experience Snapshot</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+          <h2 style="color:#ffffff; margin: 0;">🛡️ IT & OT Security Experience Snapshot</h2>
+          <a class="cta" href="lovett_cyber_summary.pdf" download style="background: linear-gradient(to right, #2a2a2a, #1e1e1e); color: #ccc; border: 1px solid #444; margin: 0; font-size: 0.95rem; padding: 0.5rem 1rem;">
+            ⬇️ Download My Cyber 1-Pager
+          </a>
+        </div>
       <div class="section-box">
         <h3><span style="color:#00bfff;">🏥</span> McKesson: International OT Security</h3>
         <p>Led the global cybersecurity delivery program supporting McKesson’s $700M OT security transformation to drive secure rollout of OT controls at scale.</p>
@@ -406,6 +416,6 @@
 </div>
 </div> <!-- closes #federal-content -->
 <a class="cta" href="connect.html">Let’s Connect</a>
-<p class="version">Version 0.5.2</p>
+<p class="version">Version 0.6</p>
 </body>
 </html>
