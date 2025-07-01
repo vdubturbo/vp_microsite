@@ -93,6 +93,8 @@
     .tab.active {
       background: #1e1e1e;
       font-weight: bold;
+      box-shadow: 0 0 8px 2px #00bfff66;
+      text-shadow: 0 0 6px #00bfff88;
     }
     .tab-content {
       display: none;
@@ -195,15 +197,15 @@
     <h1>Scott Lovett</h1>
     <img src="headshot.jpg" alt="Scott Lovett" style="width:140px;border-radius:50%;float:right;margin:1.5rem 0 1rem 1.5rem;box-shadow:0 0 10px rgba(0,0,0,0.5);" />
     <h2 style="color:#ffffff;">Executive PMO, Product, and Delivery Leader</h2> 
-    <h3 style="color:#c3c3bf;">Cybersecurity, IT, and Business Strategy</h3>
+    <h3 style="color:#c3c3bf;">Artificial Intelligence, IT/OT Security, Enterprise IT, and Business Strategy</h3>
 
     <div class="tabs-container">
       <div class="tabs">
         <div id="pmo_delivery-tab" class="tab" onclick="showTab('pmo_delivery')">Who am I?</div>
         <div id="product-tab" class="tab" onclick="showTab('product')">PMO/Product</div>
+        <div id="community-tab" class="tab" onclick="showTab('community')">DevOps/AI</div>
         <div id="cyber-tab" class="tab" onclick="showTab('cyber')">Cyber</div>
         <div id="federal-tab" class="tab" onclick="showTab('federal')">Federal</div>
-        <div id="community-tab" class="tab" onclick="showTab('community')">Dev/AI/ML</div>
       </div>
       <div class="linkedin-icon">
         <a href="https://www.linkedin.com/in/smlovett/" target="_blank" rel="noopener noreferrer">
@@ -221,20 +223,42 @@
       
         <h2 style="color:#ffffff;">🤖 Dev/AI/ML Experience Snapshot</h2>
       
-
       <div class="section-box">
-        <h3><span style="color:#00bfff;">🔍</span> Data Scraping & Analysis</h3>
-        <p>Automated extraction and processing of web data to fuel custom analytics and reporting pipelines.</p>
+        <h3 style="display: flex; justify-content: space-between; align-items: center;">
+          <span><span style="color:#00bfff;">🛩️</span> middleseat.app</span>
+          <span style="display: flex; align-items: center; gap: 0.25em;">
+            <span style="color: #ebef02; font-size: 0.9em;"><i>try it here</i> ➡️</span>
+            <a href="https://middleseat.app" target="_blank" rel="noopener noreferrer" style="color: #00bfff; text-decoration: none; font-size: 0.9em;">middleseat.app</a>
+          </span>
+        </h3>
+        <p><i>Solo</i> full-stack development of an AI Travel Planning Platform and App</p>
         <ul>
-          <li>Built Python scraping pipelines with BeautifulSoup and Selenium for reliable data collection.</li>
-          <li>Normalized and stored data in PostgreSQL, enabling versatile analysis with Pandas.</li>
-          <li>Created over 15,000 custom, high quality records for integration with parallel datasets.</li>
+          <li>Built production SaaS application helping groups find optimal meeting destinations by analyzing real-time flight data across 47 US airports.</li>
+          <li>Integrated OpenAI GPT-4 for natural language search with custom scoring algorithms, FlightAPI for live pricing, and Supabase for real-time data management</li>
+          <li>Developed automated data pipeline processing 100K+ API calls/month with intelligent rate limiting and 95%+ data accuracy</li>
+          <li>Created admin dashboard with analytics tracking search performance, pricing trends, and automated refresh scheduling</li>
+          <li>Took this app from idea to production in 7 days!</li>
+        </ul>
+        <p>Skills Demonstrated:</p>
+        <ul>
+          <li>Frontend: React, Next.js, TypeScript, Tailwind CSS, Responsive Design</li>
+          <li>Backend: Node.js, REST APIs, PostgreSQL, Data Pipeline Architecture</li>
+          <li>AI/ML: OpenAI Integration, Natural Language Processing, Scoring Algorithms</li>
+          <li>DevOps: Vercel Deployment, Environment Management, Logging Systems</li>
+          <li>Data Engineering: ETL Pipelines, API Integration, Rate Limiting, Data Normalization</li>
+          <li>Product: User Analytics, A/B Testing, Performance Optimization, Admin Tools</li>
         </ul>
       </div>
 
       <div class="section-box">
-        <h3><span style="color:#00bfff;">🛒</span> Remote Marketplace Platform</h3>
-        <p>Designed and launched an MVP of a custom scalable marketplace for on-demand professional services.</p>
+              <h3 style="display: flex; justify-content: space-between; align-items: center;">
+          <span><span style="color:#00bfff;">⚛️</span> FedFusion.ai Federal Contractors Teaming Platform</span>
+          <span style="display: flex; align-items: center; gap: 0.25em;">
+            <span style="color: #ebef02; font-size: 0.9em;"><i>coming soon at</i> ➡️</span>
+            <a href="https://fedfusion.ai" target="_blank" rel="noopener noreferrer" style="color: #00bfff; text-decoration: none; font-size: 0.9em;">fedfusion.ai</a>
+          </span>
+        </h3>
+        <p>Designing a platform for registered federal contractors to enable teaming, sales, opportunity planning, and AI enhanced RFP responses.</p>
         <ul>
           <li>Implemented real-time data ingestion, role-based access control, and transaction workflows.</li>
           <li>Leveraged Next.js, Supabase, and Tailwind CSS for a responsive user experience.</li>
@@ -243,8 +267,8 @@
       </div>
 
       <div class="section-box">
-        <h3><span style="color:#00bfff;">🍩</span> Donut Dashboard</h3>
-        <p>Developed an interactive dashboard to quickly produce key performance metrics displayed as infographics.</p>
+        <h3><span style="color:#00bfff;">🍩</span> Donut Dashboard MacOS Application</h3>
+        <p>Developed a native MacOS application for generating key performance metrics displayed as infographics.</p>
         <ul>
           <li>Built reusable React components and D3.js-based visualizations for dynamic data views.</li>
           <li>Custom ingestion of templated data via CSV.</li>
@@ -272,6 +296,16 @@
           <li>Created post-test analysis model for 3D views of temperature changes over time for replay.</li>
         </ul>
       </div>
+
+            <div class="section-box">
+        <h3><span style="color:#00bfff;">🔍</span> Data Scraping & Analysis</h3>
+        <p>Automated extraction and processing of web data to fuel custom analytics and reporting pipelines.</p>
+        <ul>
+          <li>Built Python scraping pipelines with BeautifulSoup and Selenium for reliable data collection.</li>
+          <li>Normalized and stored data in PostgreSQL, enabling versatile analysis with Pandas.</li>
+          <li>Created over 15,000 custom, high quality records for integration with parallel datasets.</li>
+        </ul>
+      </div>
     </div>
 
     <div id="pmo_delivery-content" class="tab-content">
@@ -285,7 +319,7 @@
       </div>
       <div class="section-box">
         <h2><span style="color:#00bfff;">👀</span> Why I'm Looking</h2>
-        <p>My current role is dependent on a specific client. The SOW is ending soon and my employer no longer wants to continue in the cyber/delivery advisory space. They are not only aware that I am looking for my next role, but also suggested I do so.</p>
+        <p>My last role was dependent on a specific client who was unable to renew services due to budget constraints. At the same time, my employer was exiting the advisory/delivery space, which leaves me here, looking for my next opportunity. </p>
       </div>
           
       </div>
@@ -293,7 +327,7 @@
 <h2 style="color:#ffffff;">📈 PMO & Product Experience Snapshot</h2>
 
 <div class="section-box">
-  <h3><span style="color:#00bfff;">🎯</span> Binary Defense (Present)</h3>
+  <h3><span style="color:#00bfff;">🔒</span> Binary Defense</h3>
   <p>Leading portfolio revitalization and process transformation for a $30M cybersecurity solution suite.</p>
   <ul>
     <li>Partnered with executive leadership to assess development inefficiencies and build a prioritized roadmap for scaling cyber capabilities.</li>
@@ -313,6 +347,52 @@
     <li>Launched a Lean Six Sigma QA process to ensure consistent quality and adoption across geographies.</li>
   </ul>
 </div>
+
+<div class="section-box">
+  <h3><span style="color:#00bfff;">💻</span> American Cybersystems</h3>
+  <p>Managed Services & Advisory Lead for Delivery, PMO, DevOps, and IoT Clients.</p>
+  <ul>
+    <li><span style="color:#ef0410;">CocaCola Freestyle:</span> Lead Network Managed Services (NMS) Program and successfully architected, built, and implemented a modern, scalable backend leveraging AWS cloud services and AirWatch for device management.</li>
+    <li><span style="color:#0476ef;">American Cybersystems:</span> Served as technologist and solutions architect for IoT implementations & business case development.</li>
+    <li><span style="color:#04ef5e;">Mayo Clinic:</span> Product Owner & Scrum Master for he clinic's Cardiology Department SW refactoring projects to support their CERNER -> EPIC electronic health record transition.</li>
+    <li><span style="color:#ef8904;">CA Technologies:</span> Implemented & executed emergency return to green plan for faltering outsourced DevOps project that was late and over budget.</li>
+  </ul>
+</div>
+
+<div class="section-box">
+  <h3><span style="color:#00bfff;">⚓</span> Lockheed Martin- Undersea Systems</h3>
+  <p>Portfolio & Program Manager for all software, hardware, development, and integration programs for international customers.</p>
+  <ul>
+      <li>Develop strategy & facilitate delivery of Direct Commercial and Foreign Military Sales product lines including:</li>
+  <ul>
+    <li>Conventional Submarine Command & Control Systems</li>
+    <li>Mk48 Mod 4/4M/6/7 Heavyweight Torpedo Weapon Control Systems</li>
+    <li>MK48 Torpedo Interface Cards w/FPGA architecture (HW/FW/SW)</li>
+    <li>Conformal, Flank, Passive Ranging, and Towed Array Sonar Processing Systems & Arrays </li>
+  </ul>
+    <li>Guided multi-disciplinary teams to execute SDLC, architecture design, data processing and storage, electromechanical design, system integration, performance testing and customer site integration & startup.</li>
+    <li>Built a scalable PMO framework integrating financial oversight, schedule governance, risk management, and executive reporting.</li>
+    <li>Led successful sales, delivery, and supplier efforts in the following countries:</li>
+  <ul>
+  <li>🇨🇦 Canada</li>
+  <li>🇳🇱 The Netherlands</li>
+  <li>🇪🇬 Egypt</li>
+  <li>🇩🇪 Germany</li>
+  <li>🇬🇧 UK</li>
+  <li>🇪🇸 Spain</li>
+  </ul>
+  <li>Other Lockheed Experience:</li>
+<ul>
+  <li>Operations Leadership Development Program (OLDP) Graduate</li>
+  <li>Program Management Development Program (PMDP) Graduate</li>
+  <li>LMC Program Managemenr Certification- Level 3</li>
+  <li>MS2: Aegis Combat System- Subhybrid IC Production Supervisor</li>
+  <li>Mission Systems (Gaithersburg): Strategic Airport Security Rollout (SASR) program delivery lead for SJU, STT, & STX.</li>
+  <li>Mission Systems (Colorado Springs): SQL/ColdFusion developer</li>
+</ul>  
+</ul>
+</div>
+
     </div>
 
     <div id="cyber-content" class="tab-content">
